@@ -1,1 +1,1 @@
-This is a new security freaure created per customers' requests
+This is  new MFA security feature created per popular requests.
