@@ -35,7 +35,7 @@ local_file_path = os.path.join(download_folder,'michael_oppong.txt')
 url = "https://raw.githubusercontent.com/sdg000/pydevops_intro_lab/main/change_me.txt"
 response = requests.get(url)
 
-
+# Checking if the download was successful
 if response.status_code == 200:
     print("file successfully downloaded")
     with open(local_file_path, 'wb') as file:
@@ -49,15 +49,15 @@ else:
 # Receive prompt from the user to overwrite the downloaded file with
 # this new content appending a timestamp to indicate when the file was
 # last modified
-# 
+
 user_input = input("Describe what you have learned so far in a sentence:")
 now= datetime.now()
 current_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
-# with open(local_file_path, "w") as file:
-#     file.write(user_input + "\n")
-#     file.write(f"last modifed on: {current_time}")
-#     print("File successfully modified.")
+with open(local_file_path, "w") as file:
+    file.write(user_input + "\n")
+    file.write(f"last modifed on: {current_time}")
+    print("File successfully modified.")
 
 
 #Step 7: Display the Updated File content
